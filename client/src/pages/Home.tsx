@@ -23,8 +23,9 @@ export default function Home() {
       <header className="container mx-auto px-4 py-8 flex items-center gap-4">
         <div className="w-12 h-12">
           <svg viewBox="0 0 100 100" className="w-full h-full text-primary">
-            <circle cx="50" cy="50" r="40" className="fill-current" />
-            <path d="M40 50 L60 50 M50 40 L50 60" className="stroke-white stroke-2" />
+            <path className="fill-current" d="M50 10 C30 10 15 25 15 45 C15 65 30 80 50 80 C70 80 85 65 85 45 C85 25 70 10 50 10 Z" />
+            <path className="fill-white" d="M50 20 L50 35 M40 45 L60 45 M50 55 L50 70" strokeWidth="6" stroke="white" strokeLinecap="round" />
+            <path className="fill-white" d="M35 75 L65 75 L50 90 Z" />
           </svg>
         </div>
         <h1 className="text-3xl font-bold">The Next Next</h1>
