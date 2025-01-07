@@ -4,7 +4,7 @@ import PodcastPlayer from "@/components/PodcastPlayer";
 import NewsletterPreview from "@/components/NewsletterPreview";
 import { useQuery } from "@tanstack/react-query";
 import { fetchPodcastEpisodes, fetchNewsletterPosts, type PodcastEpisode, type NewsletterPost } from "@/lib/api";
-import { Loader2 } from "lucide-react";
+import { Loader2, AlertCircle } from "lucide-react";
 
 export default function Home() {
   const { data: episodes = [], isLoading: isLoadingEpisodes } = useQuery<PodcastEpisode[]>({
@@ -69,6 +69,11 @@ export default function Home() {
                   <div className="flex justify-center py-8">
                     <Loader2 className="w-8 h-8 animate-spin text-muted-foreground" />
                   </div>
+                ) : episodes.length === 0 ? (
+                  <div className="flex flex-col items-center justify-center py-8 text-center">
+                    <AlertCircle className="w-12 h-12 text-muted-foreground mb-4" />
+                    <p className="text-muted-foreground">Episodes coming soon! Stay tuned for our first release.</p>
+                  </div>
                 ) : (
                   <div className="space-y-4">
                     {episodes.map((episode) => (
@@ -99,6 +104,11 @@ export default function Home() {
                 {isLoadingPosts ? (
                   <div className="flex justify-center py-8">
                     <Loader2 className="w-8 h-8 animate-spin text-muted-foreground" />
+                  </div>
+                ) : posts.length === 0 ? (
+                  <div className="flex flex-col items-center justify-center py-8 text-center">
+                    <AlertCircle className="w-12 h-12 text-muted-foreground mb-4" />
+                    <p className="text-muted-foreground">No posts yet. Check back soon for updates!</p>
                   </div>
                 ) : (
                   <div className="space-y-4">
