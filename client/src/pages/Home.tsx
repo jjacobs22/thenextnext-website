@@ -38,7 +38,7 @@ export default function Home() {
           </CardHeader>
           <CardContent>
             <p className="text-muted-foreground">
-              A show and newsletter that chronicles one experienced founder's exploration into how AI is changing how startups get built and funded, as well as how we live and work more generally.
+              A podcast and newsletter that chronicles one experienced founder's exploration into how AI is changing how startups get built and funded, as well as how we live and work more generally.
             </p>
           </CardContent>
         </Card>
