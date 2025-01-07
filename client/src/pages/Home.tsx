@@ -23,14 +23,21 @@ export default function Home() {
       <header className="container mx-auto px-4 py-8 flex items-center gap-4">
         <div className="w-12 h-12">
           <svg viewBox="0 0 100 100" className="w-full h-full">
+            {/* Rays */}
+            <line x1="50" y1="5" x2="50" y2="15" className="stroke-yellow-400" strokeWidth="6" strokeLinecap="round" />
+            <line x1="85" y1="20" x2="75" y2="30" className="stroke-yellow-400" strokeWidth="6" strokeLinecap="round" />
+            <line x1="95" y1="50" x2="85" y2="50" className="stroke-yellow-400" strokeWidth="6" strokeLinecap="round" />
+            <line x1="85" y1="80" x2="75" y2="70" className="stroke-yellow-400" strokeWidth="6" strokeLinecap="round" />
+            <line x1="15" y1="20" x2="25" y2="30" className="stroke-yellow-400" strokeWidth="6" strokeLinecap="round" />
+            <line x1="5" y1="50" x2="15" y2="50" className="stroke-yellow-400" strokeWidth="6" strokeLinecap="round" />
+            <line x1="15" y1="80" x2="25" y2="70" className="stroke-yellow-400" strokeWidth="6" strokeLinecap="round" />
             {/* Bulb */}
-            <circle cx="50" cy="45" r="35" className="fill-yellow-400" />
-            {/* Filaments */}
-            <path d="M40 45 L50 35 L60 45" className="stroke-white fill-none" strokeWidth="4" strokeLinecap="round" />
-            <path d="M40 55 L50 65 L60 55" className="stroke-white fill-none" strokeWidth="4" strokeLinecap="round" />
+            <circle cx="50" cy="50" r="25" className="fill-yellow-400" />
+            {/* Filament */}
+            <path d="M40 50 L50 40 L60 50" className="stroke-white fill-none" strokeWidth="3" strokeLinecap="round" />
             {/* Base */}
-            <rect x="40" y="80" width="20" height="12" className="fill-gray-300" />
-            <rect x="35" y="75" width="30" height="5" className="fill-gray-300" />
+            <rect x="45" y="75" width="10" height="15" className="fill-gray-300" />
+            <rect x="42" y="72" width="16" height="4" className="fill-gray-300" />
           </svg>
         </div>
         <h1 className="text-3xl font-bold">The Next Next</h1>
