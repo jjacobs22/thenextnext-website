@@ -22,10 +22,15 @@ export default function Home() {
       {/* Header */}
       <header className="container mx-auto px-4 py-8 flex items-center gap-4">
         <div className="w-12 h-12">
-          <svg viewBox="0 0 100 100" className="w-full h-full text-primary">
-            <path className="fill-current" d="M50 10 C30 10 15 25 15 45 C15 65 30 80 50 80 C70 80 85 65 85 45 C85 25 70 10 50 10 Z" />
-            <path className="fill-white" d="M50 20 L50 35 M40 45 L60 45 M50 55 L50 70" strokeWidth="6" stroke="white" strokeLinecap="round" />
-            <path className="fill-white" d="M35 75 L65 75 L50 90 Z" />
+          <svg viewBox="0 0 100 100" className="w-full h-full">
+            {/* Bulb */}
+            <circle cx="50" cy="45" r="35" className="fill-yellow-400" />
+            {/* Filaments */}
+            <path d="M40 45 L50 35 L60 45" className="stroke-white fill-none" strokeWidth="4" strokeLinecap="round" />
+            <path d="M40 55 L50 65 L60 55" className="stroke-white fill-none" strokeWidth="4" strokeLinecap="round" />
+            {/* Base */}
+            <rect x="40" y="80" width="20" height="12" className="fill-gray-300" />
+            <rect x="35" y="75" width="30" height="5" className="fill-gray-300" />
           </svg>
         </div>
         <h1 className="text-3xl font-bold">The Next Next</h1>
